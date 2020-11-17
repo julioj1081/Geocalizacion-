@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet</title>
+    <!--cnd jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!--cdn de leaflet-->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+        /*     background: #00000052;
+         */
+         
+         
+          background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+         }
+        .container {
+            display: flex;
+            align-items: center;
+            
+        }
+        #result{
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            color: black;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+
+        #map {
+            width: clamp(500px, 1000vw, 1050px);
+            height: 100vh;
+            
+        }
+        .hora{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: clamp(1rem, 4.5vw, 3rem);
+        }
+        .cordenadas{
+            font-size: clamp(1.5rem, 1.5vw, 2rem);
+        }
+        .oculta{
+            display: none;
+        }
+        @media (max-width: 1000px){
+            #result{
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 10000;
+                background: black;
+                opacity: 0.55;
+                color: rgb(255, 255, 255);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="map"></div>
+        <button id="find_btn">Encuentra tu provedor</button>
+        <div id="result"></div>
+    </div> 
+    <script src="main.js"></script>
+</body>
+
+</html>
